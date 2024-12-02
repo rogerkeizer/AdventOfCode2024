@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode2024
+﻿namespace AdventOfCode2024.Day02
 {
     internal class Program
     {

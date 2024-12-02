@@ -14,7 +14,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <LangVersion>preview</LangVersion>
   </PropertyGroup>
-
+  
   <ItemGroup>
     <ContentWithTargetPath Include="input-test.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -28,5 +28,5 @@
       <TargetPath>%(Filename)%(Extension)</TargetPath>
     </ContentWithTargetPath>
   </ItemGroup>
-  
+
 </Project>
