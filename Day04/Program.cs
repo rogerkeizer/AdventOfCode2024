@@ -1,4 +1,4 @@
-﻿namespace Day01;
+﻿namespace Day04;
 
 internal class Program
 {

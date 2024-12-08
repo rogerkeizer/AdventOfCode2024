@@ -1,4 +1,4 @@
-namespace AdventOfCode2024
+namespace Helpers;
 
 public static class ExtensionMethods
 {
