@@ -1,10 +1,12 @@
-namespace AdventOfCode2024.Day03
+using Helpers;
+
+namespace Day03
 {
     public class Solution(string file)
     {
         public int Star1()
         {
-            var list = File.ReadAllLines(file).SelectMany(Extensions.Parse).ToList();
+            var list = File.ReadAllLines(file).SelectMany(ExtensionMethods.Parse).ToList();
 
             var muls = 0;
 

@@ -1,3 +1,5 @@
+using System.Text.RegularExpressions;
+
 namespace Helpers;
 
 public static class ExtensionMethods
@@ -15,4 +17,8 @@ public static class ExtensionMethods
             yield return m;
         }
     }
+
+    public static IEnumerable<(int a, int b)> Parse(this string line) =>
+            Regex.Matches(line, @"(mul\((?<a>\d+)\,(?<b>\d+)\))")
+            .Select(match => (int.Parse(match.Groups["a"].Value), int.Parse(match.Groups["b"].Value)));
 }

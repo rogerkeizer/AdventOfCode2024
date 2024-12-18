@@ -8,6 +8,10 @@
     <RootNameSpace>AdventOfCode2024</RootNameSpace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Helpers\Helpers.csproj" />
+  </ItemGroup>
+  
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <LangVersion>preview</LangVersion>
   </PropertyGroup>
