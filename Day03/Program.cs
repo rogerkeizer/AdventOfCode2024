@@ -1,4 +1,4 @@
-﻿namespace Day03;
+﻿namespace AdventOfCode2024.Day03;
 internal class Program
 {
     private static void Main(string[] args)
