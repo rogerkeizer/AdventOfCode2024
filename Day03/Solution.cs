@@ -1,47 +1,24 @@
-using System.Text.RegularExpressions;
-
-namespace Day03;
-
-public class Solution(string file)
+namespace AdventOfCode2024.Day03
 {
-    public int Star1()
+    public class Solution(string file)
     {
-        var muls = 0;
-
-        var pattern = @"([0-9]+)+";
-
-        var rg = new Regex(pattern);
-
-        var input = ParseInput(file);
-
-        foreach(var l in input)
+        public int Star1()
         {
-            var matches = rg.Matches(l);
+            var list = File.ReadAllLines(file).SelectMany(Extensions.Parse).ToList();
 
-            var multiplication = matches.AsEnumerable().Select(m=>m.Value).ToList();
+            var muls = 0;
 
-            muls += Convert.ToInt32(multiplication[0]) * Convert.ToInt32(multiplication[1]);
-            
+            foreach (var (a, b) in list)
+            {
+                muls += a * b;
+            }
+
+            return muls;
         }
 
-        return muls;
-    }
-
-    public int Star2()
-    {
-        return 0;
-    }
-
-    private static List<string> ParseInput(string file)
-    {
-        var pattern = @"(mul\(([0-9]+)\,([0-9]+)\))";
-
-        var rg = new Regex(pattern);
-
-        var f = File.ReadAllText(file);
-
-        MatchCollection matches = rg.Matches(f);
-
-        return matches.AsEnumerable().Select(m => m.Value).ToList();
+        public int Star2()
+        {
+            return 0;
+        }
     }
 }
